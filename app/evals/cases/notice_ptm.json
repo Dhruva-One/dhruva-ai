@@ -1,0 +1,9 @@
+{
+  "input": {
+    "tenant_id": "11111111-1111-1111-1111-111111111111",
+    "audience": "Parents of Class 10",
+    "facts": ["Parent-teacher meeting on Saturday 7 November, 9 am to 12 noon"],
+    "language": "en"
+  },
+  "must_include": ["7 November"]
+}
