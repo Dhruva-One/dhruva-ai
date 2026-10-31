@@ -67,6 +67,7 @@ flowchart LR
 | `app/metering/` | Per-tenant cost metering and budgets |
 | `app/evals/` | Evaluation harness and cases |
 | `tests/` | Unit and API tests |
+| `spec/endpoints.json`, `app/spec_stubs.py` | The 34 AI-service APIs from the functional spec (one per AI capability flag plus ask, drafts, timetable, OCR, voice, translate, evals); each answers 501 until built |
 | `Dockerfile` | Container image |
 
 ## Run it locally
@@ -95,7 +96,9 @@ curl -X POST localhost:8000/v1/exams/seating -H 'content-type: application/json'
   -d '{"students":{"s1":"10A","s2":"10A","s3":"10B","s4":"10B"},"rows":1,"seats_per_row":4}'
 ```
 
-Interactive API docs: <http://localhost:8000/docs>.
+Interactive API docs: <http://localhost:8000/docs>. The `spec stubs` group lists every AI API the spec needs; `GET /internal/spec/coverage` shows how many are built.
+
+The catalog is generated in `dhruva-platform` (`npm run spec:sync`); copy `spec/services/ai-endpoints.json` here as `spec/endpoints.json` when it changes.
 
 Tests, lint and evals:
 
