@@ -5,6 +5,7 @@ from app.features.drafts import Draft, NoticeDraftRequest, draft_notice
 from app.features.seating import SeatingPlan, SeatingRequest, plan_seating
 from app.metering.meter import BudgetExceeded, CostMeter
 from app.providers.registry import get_provider
+from app.spec_stubs import register_spec_stubs
 
 app = FastAPI(title="dhruva-ai", version="0.1.0")
 provider = get_provider(settings.model_provider)
@@ -31,3 +32,12 @@ def exam_seating(req: SeatingRequest) -> SeatingPlan:
         return plan_seating(req)
     except ValueError as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
+
+
+# Every AI-service API from the functional spec that is not implemented above answers 501 (see app/spec_stubs.py).
+spec_coverage = register_spec_stubs(app)
+
+
+@app.get("/internal/spec/coverage")
+def coverage() -> dict:
+    return spec_coverage
