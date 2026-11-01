@@ -67,7 +67,7 @@ flowchart LR
 | `app/metering/` | Per-tenant cost metering and budgets |
 | `app/evals/` | Evaluation harness and cases |
 | `tests/` | Unit and API tests |
-| `spec/endpoints.json`, `app/spec_stubs.py` | The 34 AI-service APIs from the functional spec (one per AI capability flag plus ask, drafts, timetable, OCR, voice, translate, evals); each answers 501 until built |
+| `spec/endpoints.json`, `app/spec_stubs.py` | The 36 AI-service APIs from the functional spec (one per AI capability flag plus ask, drafts, timetable, OCR, voice, translate, evals); each answers 501 until built |
 | `Dockerfile` | Container image |
 
 ## Run it locally

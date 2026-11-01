@@ -3,6 +3,7 @@
 {"m":"POST","p":"/internal/v1/capabilities/assistant_chat","mod":"ai","o":"d","why":"Run capability ai.assistant_chat for the platform (returns a suggestion or draft)","req":["AI-CHT","AI-HLO","AI-QLT","DSK-FIN","DSK-HRP","DSK-SHL","DSK-STM","DSK-STS","MOB-DHR","XCT-SRC"],"src":"flag ai.assistant_chat"},
 {"m":"POST","p":"/internal/v1/capabilities/at_risk_detection","mod":"ai","o":"d","why":"Run capability ai.at_risk_detection for the platform (returns a suggestion or draft)","req":["AI-RSK","DSK-CNS","WAB-TCH"],"src":"flag ai.at_risk_detection"},
 {"m":"POST","p":"/internal/v1/capabilities/bank_matching","mod":"ai","o":"d","why":"Run capability ai.bank_matching for the platform (returns a suggestion or draft)","req":["AI-BNK"],"src":"flag ai.bank_matching"},
+{"m":"POST","p":"/internal/v1/capabilities/counselling_assist","mod":"ai","o":"d","why":"Run capability ai.counselling_assist for the platform (returns a suggestion or draft)","req":["AI-NTC","AI-RSK"],"src":"flag ai.counselling_assist"},
 {"m":"POST","p":"/internal/v1/capabilities/cover_suggestions","mod":"ai","o":"d","why":"Run capability ai.cover_suggestions for the platform (returns a suggestion or draft)","req":["AI-COV"],"src":"flag ai.cover_suggestions"},
 {"m":"POST","p":"/internal/v1/capabilities/data_import_checks","mod":"ai","o":"d","why":"Run capability ai.data_import_checks for the platform (returns a suggestion or draft)","req":["AI-IMP"],"src":"flag ai.data_import_checks"},
 {"m":"POST","p":"/internal/v1/capabilities/exam_planning","mod":"ai","o":"d","why":"Run capability ai.exam_planning for the platform (returns a suggestion or draft)","req":["AI-PPR","DSK-EXM"],"src":"flag ai.exam_planning"},
@@ -31,6 +32,7 @@
 {"m":"POST","p":"/internal/v1/voice/transcribe","mod":"ai","o":"d","why":"Speech to text","req":["AI-VOI"],"src":"AI service side of §5"},
 {"m":"POST","p":"/internal/v1/translate","mod":"ai","o":"d","why":"Translate","req":["AI-TRL"],"src":"AI service side of §5"},
 {"m":"POST","p":"/internal/v1/eval/runs","mod":"ai","o":"d","why":"Run an evaluation","req":["AI-QLT"],"src":"AI service side of §5"},
+{"m":"GET","p":"/internal/v1/eval/runs/{id}","mod":"ai","o":"d","why":"An evaluation run: metrics and pass or fail","req":["AI-QLT"],"src":"AI service side of §5"},
 {"m":"GET","p":"/internal/v1/models","mod":"ai","o":"d","why":"Model registry","req":["AI-QLT"],"src":"AI service side of §5"},
 {"m":"GET","p":"/internal/v1/explain/{outputId}","mod":"ai","o":"d","why":"How an output was worked out","req":["AI-AUD"],"src":"AI service side of §5"}
 ]
